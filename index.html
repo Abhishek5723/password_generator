@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -14,8 +15,8 @@
 
     <input readonly placeholder="Password" class="display" data-passwordDisplay>
 
-    <button data-copy>
-        <span data-copyMSg></span>
+    <button class="copyBtn" data-copy>
+        <span  class="tooltip" data-copyMSg></span>
         <img src="copy.svg" alt="copy" width="23" height="23">
     </button>
 </div>
@@ -32,22 +33,22 @@
 
 <!-- checkboxes -->
 
-<div>
+<div class="check">
     <input type="checkbox" id="uppercase">
     <label for="uppercase">Includes Uppercase letters</label>
 </div>
 
-<div>
+<div class="check" >
     <input type="checkbox" id="lowercase">
     <label for="lowercase">Includes lowercase letters</label>
 </div>
 
-<div>
+<div class="check">
     <input type="checkbox" id="numbers">
     <label for="numbers">Includes Numbers </label>
 </div>
 
-<div>
+<div class="check">
     <input type="checkbox" id="symbols">
     <label for="symbols">Includes Symbols </label>
 </div>
@@ -58,7 +59,7 @@
 <div class="strength-container">
 <p>Strength</p>
 
-<div data-indicator></div>
+<div class="indicator" data-indicator></div>
 
 </div>
 

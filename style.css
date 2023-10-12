@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan',sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(64, 13, 58, 0.418) 13%, rgb(67, 11, 67) 65%);
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+
+}
+
+h1{
+    color: white;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container{
+    position: relative;
+    background-color: rgb(61, 9, 61);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(215, 120, 215);
+    margin: 1rem;
+    padding-top: 0.35rem;
+}
+
+.display{
+    width: 100;
+    background-color: transparent;
+
+    padding: 1.15rem 1rem;
+    color: rgb(168, 168, 69);
+    font-weight:600 ;
+    font-size: 1.5rem;
+    line-height:30px ;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+.display::placeholder{
+    position: absolute;
+    top: 30%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height:30px  ;
+    color: rgb(168, 168, 38);
+    opacity: 0.65;
+    text-transform: uppercase;
+    /* translate: translateY(-30%) ; */
+}
+.display-container button{
+    position: absolute;
+    top:30%;
+    right:1.5rem;
+    /* translate: translateY(-30%) ; */
+}
+
+.input-container{
+    width: 100%;
+    background-color: rgb(61, 9, 61) ;
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid rgb(215, 120, 215);
+
+}
+
+.length-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.length-container p:nth-child(2){
+    color: rgb(168, 168, 38);
+    font-size: 1.5rem;
+    
+}
+
+.strength-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+
+}
+.strength-container p{
+    color: rgb(168, 168, 38);
+    font-size: 1.5rem;
+
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+
+
+}
+.generateButton{
+    width: 100%;
+    padding:1rem 0 ;
+    background-color: rgb(240, 48, 240);
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid rgb(230, 230, 28);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:rgb(242, 242, 51) ;
+    font-weight:600;
+    font-size:1.25rem
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+   
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+background-color: aquamarine;
+}
+
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+
+.copyBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.tooltip{
+    position: absolute;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity:0 ;
+    transform-origin: bottom;
+    transition:all 250ms ease-in-out;
+    transform: scale(0);
+    background-color: rgb(127, 14, 127) ;
+    color: rgb(185, 185, 44);
+}
+.tooltip.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+.slider{
+    appearance: none;
+     width:100% ;
+     height: 0.75rem;
+     cursor: pointer;
+     background-color: violet;
+     border-radius: 1rem;
+     margin-top: 2rem;
+     margin-bottom: 1.5rem;
+     background-image: linear-gradient(rgb(90, 26, 90) ,rgb(20, 1, 20) );
+     background-repeat: no-repeat;
+     border: none;
+     outline: none;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top:-3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid yellow;
+
+}
+.slider::-webkit-slider-thumb:hover{
+    /* outline: 2px solid yellow; */
+    background-color: rgb(23, 1, 23);
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61,0.80);
+}
+
